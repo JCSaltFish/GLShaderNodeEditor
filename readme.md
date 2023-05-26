@@ -78,6 +78,8 @@ This is an OpenGL shader node editor based on [Dear ImGui](https://github.com/oc
 
 ##
 ### Other libraries used:
+* GLEW: https://github.com/nigels-com/glew
+* GLFW: https://github.com/glfw/glfw
 * OpenGL Mathematics: https://github.com/g-truc/glm
 * tiny file dialogs: https://sourceforge.net/projects/tinyfiledialogs/
 * stb: https://github.com/nothings/stb
