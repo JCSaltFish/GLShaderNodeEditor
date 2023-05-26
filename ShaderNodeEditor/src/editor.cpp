@@ -862,7 +862,8 @@ void ShaderNodeEditor::UpdateProgramNode(int nodeId, int progId)
 void ShaderNodeEditor::SetProgramNodeFramebuffer(EditorProgramNode* node, int framebufferId)
 {
     int outPinId = 0;
-    auto pinsOut = node->pinsOut;
+    auto& pinsOut = node->pinsOut;
+    bool needsUpdate = false;
     for (auto& outPin : pinsOut)
     {
         if (outPin->type == EditorPinType::TEXTURE)
@@ -870,8 +871,14 @@ void ShaderNodeEditor::SetProgramNodeFramebuffer(EditorProgramNode* node, int fr
             DeletePin(outPin);
             node->pinsOut.erase(node->pinsOut.begin() + outPinId);
             outPinId--;
+            needsUpdate = true;
         }
         outPinId++;
+    }
+    if (needsUpdate)
+    {
+        UpdatePins();
+        UpdateLinks();
     }
 
     Framebuffer* framebuffer = m_Framebuffers[framebufferId];

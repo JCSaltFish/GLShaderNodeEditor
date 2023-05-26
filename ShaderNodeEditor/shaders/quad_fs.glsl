@@ -19,8 +19,9 @@ void main()
 	vec3 col = 0.5 + 0.5*cos(uTime+tex_coord.xyx+vec3(0,2,4));
 	vec2 coord = tex_coord;
 	coord.y = 1. - coord.y;
-	fragcolor = texture2D(tex, coord);
+	vec4 texColor = texture2D(tex, coord);
+	//fragcolor = texture2D(tex, coord);
 	//fragcolor = vec4(testBlock.col.xyz + uCol.rgb, alpha);
 	//fragcolor = vec4(col, 1.0);
-	//fragcolor = vec4(mousePos, uCol.b, alpha);
+	fragcolor = vec4(mousePos, uCol.b + texColor.a, alpha);
 }
