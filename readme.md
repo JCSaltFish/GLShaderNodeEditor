@@ -5,15 +5,15 @@
 This is an OpenGL shader node editor based on [Dear ImGui](https://github.com/ocornut/imgui) and [ImNodes](https://github.com/Nelarius/imnodes), which deals with GLSL shaders, including dynamic creation, linking, uniforms setting, and buffers binding in runtime via GUI operations. Basically it covers most of the C++ OpenGL client coding throughout the rendering pipeline.
 
 * #### Programs
-  A program can link multiple shaders for a rendering pipeline.  
-  ![Program](https://github.com/JCSaltFish/GLShaderNodeEditor/blob/master/doc/program.png)
+  ![Program](https://github.com/JCSaltFish/GLShaderNodeEditor/blob/master/doc/program.png)  
+  A program can link multiple shaders for a rendering pipeline.
 
 * #### Framebuffers
   ![Framebuffer](https://github.com/JCSaltFish/GLShaderNodeEditor/blob/master/doc/framebuffer.png)
 
 * #### Textures
-  Visualization of OpenGL texture objects.  
-  ![Texture](https://github.com/JCSaltFish/GLShaderNodeEditor/blob/master/doc/texture.png)
+  ![Texture](https://github.com/JCSaltFish/GLShaderNodeEditor/blob/master/doc/texture.png)  
+  Visualization of OpenGL texture objects.
 
 * #### Nodes
   * ##### Event Nodes  
@@ -29,13 +29,13 @@ This is an OpenGL shader node editor based on [Dear ImGui](https://github.com/oc
       ![ProgramNodeAttribsCompute](https://github.com/JCSaltFish/GLShaderNodeEditor/blob/master/doc/prognodeattribscomp.png)  
       * Dispatch Type: `glDrawArray()` or `glDispatchCompute()`
       * Framebuffer: screen or user created framebuffer
-      * Draw Mode: 1t param of `glDrawArray()`
+      * Draw Mode: 1st param of `glDrawArray()`
       * Size: 3rd param of `glDrawArray()` (The 2nd param will always be 0)
       * Work Group Size X/Y/Z: params of `glDispatchCompute()`  
       
     ![ProgramNode](https://github.com/JCSaltFish/GLShaderNodeEditor/blob/master/doc/prognode.png)  
     * Node Inputs  
-      * Flow InS
+      * Flow In
       * Uniforms
       * Uniform Blocks
       * Shader Storage Buffers
